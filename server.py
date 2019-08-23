@@ -6,7 +6,7 @@ from flask_cors import CORS
 import os
 from io import BytesIO
 from PIL import Image
-from model.model import make_prediction, load_model, load_cat_to_name, pretty_print_prediction
+from model.predictor import make_prediction, load_model, load_cat_to_name, pretty_print_prediction
 from model.image import decode_image, transform_image, image_to_tensor
 
 # Start app
