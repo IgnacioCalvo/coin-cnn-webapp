@@ -16,7 +16,7 @@ app = Flask(__name__,
   template_folder='static')
 
 # Activate CORS.
-CORS(app, resources={r'/*': {'origins': 'http://localhost:5000'}})
+CORS(app, resources={r'/*': {'origins': 'http://localhost:80'}})
 
 # Global variables
 publicPath = '{}/'.format(os.getcwd())
@@ -45,4 +45,4 @@ def catch_all(path):
 
 
 if __name__ == '__main__':
-  app.run() 
+  app.run(host="0.0.0.0", port=80) 
